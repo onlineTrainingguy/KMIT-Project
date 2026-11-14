@@ -1,0 +1,19 @@
+name: Hello World Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stage 1 - Prepare
+        run: echo "Starting hello world workflow..."
+
+      - name: Stage 2 - Hello World
+        run: echo "Hello, World!"
+
+      - name: Stage 3 - Complete
+        run: echo "Workflow completed successfully."
